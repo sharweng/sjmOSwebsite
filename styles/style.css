@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    padding-top: 80px;
-    min-height: 100%;
+    padding-top: 90px;
+    min-height: 100vh;
     position: relative;
     padding-bottom: 120px;
 }
@@ -21,7 +21,7 @@ form {
     top: 0;
     right: 0;
     left: 0;
-    height: 70px;
+    height: 88px;
     z-index: 1050;
 }
 
@@ -47,26 +47,6 @@ form {
     bottom: 0;
 }
 
-.green-hover{
-    color: black;
-}
-.green-hover:hover{
-    cursor: pointer;
-    color: #337357;
-}
-
-.light-green{
-    color: #C2FFC7;
-}
-.green{
-    color: #9EDF9C;
-}
-.dark-green{
-    color: #62825D;
-}
-.dark2-green{
-    color: #526E48;
-}
 .container-sm{
     width: 70%;
     max-width: 800px;
@@ -110,4 +90,36 @@ form {
 .btn, .enlarge {
     transition: transform 0.1s ease; /* Smooth animation */
 }
+
+.navbar-toggler {
+    z-index: 100;
+}
+.navbar-collapse {
+    background-color: rgba(248, 249, 250, 1);
+}
+.dropdown-item:active{
+    background-color: #3b3b3b;
+}
+.dropdown-item.active{
+    background-color: #3b3b3b;
+}
+
+/* IFRAME */
+iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+.text-box{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+p{
+    text-indent: 3em;
+    font-size: 18px;
+}
+
+
 
