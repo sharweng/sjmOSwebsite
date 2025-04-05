@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Server Case Study</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <!-- BOOTSTRAP AND CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="px-4">
+    <!-- Existing Navigation Bar -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary site-header border-bottom">
+        <div class="container-fluid container-md">
+            <a class="navbar-brand fw-bold" href="/sjmOSwebsite/">
+                ITOS220-T: Operating Systems
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav px-3 me-auto mb-2 mb-md-0 d-flex justify-content-end w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/sjmOSwebsite/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Laboratory Activities
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win95.html">Windows 95</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/winNT.html">Windows NT 4.0</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win98.html">Windows 98 SE</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win2k.html">Windows 2000</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/winME.html">Windows ME</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/winXP.html">Windows XP</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win2k3.html">Windows Server 2003</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/winVista.html">Windows Vista</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win2k8.html">Windows Server 2008 R2</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win7.html">Windows 7</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win8.html">Windows 8</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win10.html">Windows 10</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/installation/win11.html">Windows 11</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/activities/active-directory.html">Active Directory</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/activities/dhcp-joining.html">DHCP & Joining Workstations</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/activities/group-policy.html">Group Policy Management</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/activities/raid.html">RAID</a></li>
+                            <li><a class="dropdown-item" href="/sjmOSwebsite/activities/file-server.html">File Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sjmOSwebsite/case-study.html">Final Activity</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content with Sidebar -->
+    <div class="container-md px-3 main-box mt-3">
+        <div class="row">
+            <div class="fw-bold title-box h2 mb-4">
+                Windows Server Case Study
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-md-3 mb-4">
+                <div class="list-group sticky-top" style="top: 100px;">
+                    <a href="#domain-controller" class="list-group-item list-group-item-action">Domain Controller</a>
+                    <a href="#domain-users" class="list-group-item list-group-item-action">Domain Users</a>
+                    <a href="#dhcp" class="list-group-item list-group-item-action">DHCP</a>
+                    <a href="#file-sharing" class="list-group-item list-group-item-action">File Sharing</a>
+                    <a href="#raid" class="list-group-item list-group-item-action">RAID</a>
+                    <a href="#remote-desktop" class="list-group-item list-group-item-action">Remote Desktop</a>
+                    <a href="#web-server" class="list-group-item list-group-item-action">Web Server</a>
+                    <a href="#group-policy" class="list-group-item list-group-item-action">Group Policy</a>
+                    <a href="#windows-deployment" class="list-group-item list-group-item-action">Windows Deployment</a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <!-- Domain Controller -->
+                <section id="domain-controller" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Domain Controller</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/PBNE-K7_5uM" title="Domain Controller" allowfullscreen></iframe>
+                            </div>
+                            <h4>What is a Domain Controller?</h4>
+                            <p>A <strong>Domain Controller (DC)</strong> is a server that responds to security authentication requests within a Windows Server domain. It's responsible for storing user account information, authenticating users, and enforcing security policies for all computers in a domain. Domain Controllers host a copy of Active Directory, which maintains a database of users, computers, and network resources. They play a crucial role in enterprise environments by centralizing user management, enabling single sign-on capabilities, and providing a framework for applying group policies across the network.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Domain Users -->
+                <section id="domain-users" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Domain Users</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/07HJCPCYnTw" title="Domain Users" allowfullscreen></iframe>
+                            </div>
+                            <h4>Managing Domain Users</h4>
+                            <p>
+                                <strong>Domain Users</strong> are user accounts created and managed within Active Directory. These accounts allow individuals to access network resources based on their assigned permissions and group memberships. Domain user accounts are centrally managed by administrators, who can set password policies, account restrictions, and access rights. This centralized approach simplifies user management across the organization, ensures consistent security policies, and enables users to log in to any computer in the domain with the same credentials, accessing their personalized settings and network resources.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- DHCP -->
+                <section id="dhcp" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>DHCP</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/zWHEoSuO-zw" title="DHCP" allowfullscreen></iframe>
+                            </div>
+                            <h4>Dynamic Host Configuration Protocol</h4>
+                            <p>
+                                <strong>Dynamic Host Configuration Protocol (DHCP)</strong> is a network service that automatically assigns IP addresses and other network configuration parameters to devices on a network. In Windows Server, DHCP eliminates the need for manual IP configuration, reducing administrative overhead and configuration errors. The DHCP server maintains a pool of available IP addresses and leases them to clients for a specified period. It also provides clients with subnet masks, default gateways, DNS server addresses, and other network settings, ensuring consistent network configuration across all devices.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- File Sharing -->
+                <section id="file-sharing" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>File Sharing</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/W7egbMwZ_jc" title="File Sharing" allowfullscreen></iframe>
+                            </div>
+                            <h4>Windows File Sharing</h4>
+                            <p>
+                                <strong>File Sharing</strong> in Windows Server allows users to access files and folders stored on the server from their client computers. It uses the Server Message Block (SMB) protocol to provide shared access to files, printers, and other resources on the network. Administrators can create shared folders with specific permissions, controlling who can read, write, or modify files. Windows Server file sharing features include Distributed File System (DFS) for organizing shared folders, File Server Resource Manager for quota management, and advanced permissions for granular access control, making it a robust solution for enterprise file management.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- RAID -->
+                <section id="raid" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>RAID</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/ggwuZPatL04" title="RAID" allowfullscreen></iframe>
+                            </div>
+                            <h4>Redundant Array of Independent Disks</h4>
+                            <p>
+                                <strong>Redundant Array of Independent Disks (RAID)</strong> is a storage technology that combines multiple physical disk drives into a single logical unit for data redundancy, performance improvement, or both. Windows Server supports various RAID levels, including RAID 0 (striping) for improved performance, RAID 1 (mirroring) for data redundancy, RAID 5 (striping with parity) for balanced performance and redundancy, and RAID 10 (mirroring and striping) for high performance and reliability. RAID configurations protect against data loss due to disk failures and can be implemented through hardware controllers or Windows Server's Storage Spaces feature.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Remote Desktop -->
+                <section id="remote-desktop" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Remote Desktop</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/W3855v6acaQ" title="Remote Desktop" allowfullscreen></iframe>
+                            </div>
+                            <h4>Remote Desktop Services</h4>
+                            <p>
+                                <strong>Remote Desktop Services (RDS)</strong> is a Windows Server role that enables users to access applications, data, and virtual desktops running on a remote server. It allows multiple users to connect simultaneously to a server, each with their own session, reducing the need for powerful client hardware. RDS includes features like RemoteApp for delivering applications, Virtual Desktop Infrastructure (VDI) for hosting desktop environments, and Remote Desktop Gateway for secure internet access. This technology supports remote work scenarios, centralized application management, and efficient resource utilization across the organization.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Web Server -->
+                <section id="web-server" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Web Server</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/yRI6iEkXZBg" title="Web Server" allowfullscreen></iframe>
+                            </div>
+                            <h4>Internet Information Services</h4>
+                            <p>
+                                <strong>Internet Information Services (IIS)</strong> is Microsoft's web server software included with Windows Server. It hosts websites, web applications, and web services on the Windows platform. IIS supports various web technologies including HTML, CSS, JavaScript, ASP.NET, PHP, and more. It provides features like application pools for isolation, SSL/TLS for secure communications, URL rewriting, and compression for improved performance. IIS also includes management tools for easy configuration, monitoring, and troubleshooting, making it a comprehensive solution for hosting web content in enterprise environments.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Group Policy -->
+                <section id="group-policy" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Group Policy</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/KA8D8s9piC4" title="Group Policy" allowfullscreen></iframe>
+                            </div>
+                            <h4>Group Policy Management</h4>
+                            <p>
+                                <strong>Group Policy</strong> is a feature of Windows Server that provides centralized management and configuration of operating systems, applications, and user settings in an Active Directory environment. Administrators can create Group Policy Objects (GPOs) that define specific configurations and apply them to users and computers based on their organizational unit membership. Group Policy can manage security settings, deploy software, configure Windows features, map network drives, and enforce compliance with organizational standards. This powerful tool reduces administrative overhead by automating configuration tasks and ensuring consistent settings across the network.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Windows Deployment -->
+                <section id="windows-deployment" class="mb-5">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Windows Deployment</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/OEfVUSbD_OU" title="Windows Deployment" allowfullscreen></iframe>
+                            </div>
+                            <h4>Windows Deployment Services</h4>
+                            <p>
+                                <strong>Windows Deployment Services (WDS)</strong> is a server role that enables network-based installation of Windows operating systems. It allows administrators to deploy Windows images to multiple computers simultaneously without requiring physical access to each machine. WDS works with other deployment technologies like Microsoft Deployment Toolkit (MDT) and System Center Configuration Manager (SCCM) to provide comprehensive deployment solutions. Features include multicast transmission for efficient network usage, boot image management, and driver provisioning. This technology significantly reduces the time and effort required to deploy and configure Windows systems across an organization.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">&copy;
+            <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
+            <span> by Marbella, SJ. Marbella. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Additional CSS for the sidebar -->
+    <style>
+        section {
+            scroll-margin-top: 100px;
+        }
+        
+        .list-group-item.active {
+            background-color: #212529;
+            border-color: #212529;
+        }
+        
+        @media (max-width: 767.98px) {
+            .sticky-top {
+                position: static;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+    <!-- Script to highlight active sidebar item -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('.list-group-item');
+            
+            function highlightNavItem() {
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.scrollY >= sectionTop - 150) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === `#${currentSection}`) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightNavItem);
+            highlightNavItem(); // Initial call
+        });
+    </script>
+</body>
+</html>
